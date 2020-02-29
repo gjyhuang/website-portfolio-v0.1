@@ -25,6 +25,15 @@
   }
 }
 
+.features article {
+  position: relative;
+}
+
+.link-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
 #wrapper {
   > header {
     @include padding(
@@ -184,6 +193,7 @@
     }
 
     .image {
+      position: relative;
       border-radius: 100%;
       margin: 0 _size(section-spacing, large) _size(element-margin) 0;
       width: 22em;
@@ -194,6 +204,18 @@
         border-radius: 100%;
         width: 100%;
       }
+    }
+
+    .image:after {
+      content: " ";
+      z-index: 10;
+      display: block;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #26467020;
     }
 
     .content {
