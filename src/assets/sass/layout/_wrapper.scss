@@ -34,13 +34,26 @@
   bottom: 0;
 }
 
+.pdf-link {
+  text-align: right;
+}
+
+hr {
+  z-index: 3;
+}
+
 #wrapper {
+  header.resume {
+    padding-bottom: 20px;
+  }
+
   > header {
     @include padding(
       7.5em,
       0,
       (3.5em, 0, _size(wrapper-edges, large) * -0.5, 0)
     );
+
 
     .inner {
       margin: 0 auto;
@@ -61,6 +74,10 @@
       letter-spacing: _font(kern-heading);
       line-height: 2;
       text-transform: uppercase;
+    }
+
+    .resume-links {
+      text-transform: none;
     }
   }
 
@@ -164,6 +181,7 @@
     &:after {
       @include vendor('transform', 'scaleY(-1) scaleX(-1)');
     }
+
   }
 
   .inner {
@@ -339,4 +357,46 @@
       @include padding(2em, 1.5em);
     }
   }
+}
+
+.inner.resume {
+  padding-top: 0px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.elevate {
+  position: relative;
+  z-index: 3;
+}
+
+.special-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.special-wrap span.special {
+  margin-left: 20px;
+}
+
+.resume-wrap {
+  position: relative;
+  max-width: 800px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: .8em;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  opacity: .4;
+  margin-bottom: 2em;
 }

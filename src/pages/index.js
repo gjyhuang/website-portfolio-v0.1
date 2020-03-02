@@ -1,14 +1,14 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 
 import pic1 from '../assets/images/pic01.jpg';
 import pic2 from '../assets/images/pic02.jpg';
 import pic3 from '../assets/images/pic03.jpg';
-import pic4 from '../assets/images/pic04.jpg';
-import pic5 from '../assets/images/pic05.jpg';
-import pic6 from '../assets/images/pic06.jpg';
-import pic7 from '../assets/images/pic07.jpg';
+import pic4 from '../assets/images/subwifi.png';
+import pic5 from '../assets/images/stockPic.png';
+import pic6 from '../assets/images/Armory.png';
 
 import config from '../../config';
 const IndexPage = () => (
@@ -32,7 +32,7 @@ const IndexPage = () => (
           <div className="content">
             <h2 className="major">Hi there!</h2>
             <p>
-              I'm a writer, an artist, a designer, and a translator. I've spent
+              I'm a software developer, writer, artist, and designer. I've spent
               years living in countries like Japan, China, and South Africa.
               I started out in journalism and teaching, but my time abroad showed
               me what sorts of innovations could better people's lives versus what
@@ -40,6 +40,15 @@ const IndexPage = () => (
               impact - while designing some pretty awesome things in the process -
               and thus made the switch to software development!
             </p>
+
+            <div className="special-wrap">
+              <span className="special">
+                <a href="https://www.linkedin.com/in/gracejh">LinkedIn</a>
+              </span>
+              <span className="special">
+                <a href="https://https://github.com/gjyhuang">Github</a>
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -58,9 +67,12 @@ const IndexPage = () => (
               of RESTful APIs and TDD, having built test suites using Jasmine, Mocha, Jest,
               and Enzyme. I also have a solid foundation in HTML, CSS, SCSS, and web design.
             </p>
-            <a href="/#" className="special">
+
+            <span className="special">
+            <Link to="/Resume">
               See more on my resume
-            </a>
+            </Link>
+            </span>
           </div>
         </div>
       </section>
@@ -79,13 +91,11 @@ const IndexPage = () => (
               illustrations, or dabbling in music and cardistry/sleight of hand, whenever I can.
               I also love to mentor and teach!
             </p>
-            <a href="/#" className="special">
-              Learn more
-            </a>
           </div>
         </div>
       </section>
 
+      <a id="projects"></a>
       <section id="four" className="wrapper alt style1">
         <div className="inner">
           <h2 className="major">Projects</h2>
@@ -136,31 +146,33 @@ const IndexPage = () => (
               I built the front end with React Native, Redux, and Styled Components, and implemented real-time chat using Firebase.
 
               </p>
-              <a href="/#" className="special">
-                Learn more
+              <a href="https://github.com/gjyhuang/Accountabuddy" className="special">
+                View screenshots
               </a>
             </article>
             <article>
               <a href="/#" className="image">
                 <img src={pic6} alt="" />
               </a>
-              <h3 className="major">Ante fermentum</h3>
+              <h3 className="major">The Armory</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
-                nulla dignissim dapibus ultrices.
+              A demo e-commerce app for weaponry developed with Node, React, Redux, Express.js, Sequelize, and Postgres.
+              Managed the team’s workflow while handling guest data persistence and creating the design schemas, graphics, and CSS.
               </p>
-              <a href="/#" className="special">
-                Learn more
-              </a>
+              <div className="link-bottom">
+                <a href="http://the-armory.herokuapp.com/" className="special">
+                  Give it a look
+                </a>
+              </div>
             </article>
           </section>
-          <ul className="actions">
+          {/* <ul className="actions">
             <li>
               <a href="/#" className="button">
                 Browse All
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </section>
     </section>

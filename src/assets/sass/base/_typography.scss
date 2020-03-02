@@ -34,7 +34,7 @@
 		}
 	}
 
-	a {
+	a, span {
 		@include vendor('transition', 'color #{_duration(transition)} ease-in-out, border-bottom-color #{_duration(transition)} ease-in-out');
 		border-bottom: dotted 1px _palette(fg-light);
 		color: _palette(fg-bold);
@@ -121,6 +121,10 @@
 			padding-bottom: 1em;
 			border-bottom: solid 2px _palette(border);
 		}
+	}
+
+	header h1 {
+		font-size: 1.5em;
 	}
 
 	h2 {
